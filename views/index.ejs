@@ -1,0 +1,54 @@
+
+
+<html>
+<head>
+    <title>Welcome to the Gumball Machine (Groovy Version)</title>
+</head>
+
+<body>
+<h1 align="center">Welcome to the Gumball Machine</h1>
+
+ <form name="Gumball" method="post" action="/GumballAction">
+    <p>
+
+
+    <div align="center">
+        <textarea cols="50" rows="10" readonly >
+
+             <% { %>
+       ...................................
+       Model Number :  <%=userlist[0]%>
+        
+       Serial Number:  <%=userlist[1]%>
+        
+       State :         <%=userlist[2]%>
+       ...................................
+       Number of Gumballs in the inventory : <%=userlist[3]%>
+
+       
+    
+
+        <% } %>  
+       
+ </textArea>
+
+ <input type="hidden" name="modelNumber" value=<%=userlist[0]%>>
+     <input type="hidden" name="serialNumber" value=<%=userlist[1]%>>
+    <input type="hidden" name="state" value=<%=userlist[2]%> >
+    <input type="hidden" name="count" value=<%=userlist[3]%>>
+
+    </div>
+</p>
+    <p align="center"><img src="/images/giant-gumball-machine.jpg"  width="385" height="316"></p>
+
+    <p align="center">
+        <input type="submit" name="event" id="btnInsertQuarter" value="InsertQuarter">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit" name="event" id="btnTurnCrank" value="TurnCrankNow">
+    </p>
+
+</form>
+
+
+</body>
+</html>
